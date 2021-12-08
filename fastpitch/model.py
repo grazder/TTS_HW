@@ -256,6 +256,7 @@ class FastPitch(nn.Module):
 
         # Input FFT
         enc_out, enc_mask = self.encoder(inputs, conditioning=spk_emb)
+        enc_out += proms.unsqueeze(-1)
 
         # Alignment
         text_emb = self.encoder.word_emb(inputs)
@@ -332,7 +333,8 @@ class FastPitch(nn.Module):
 
         # Input FFT
         enc_out, enc_mask = self.encoder(inputs, conditioning=spk_emb)
-
+        enc_out += proms.unsqueeze(-1)
+        
         # Predict durations
         log_dur_pred = self.duration_predictor(enc_out, enc_mask).squeeze(-1)
         dur_pred = torch.clamp(torch.exp(log_dur_pred) - 1, 0, max_duration)
