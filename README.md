@@ -1,6 +1,6 @@
 # TTS Homework
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Piteryo/TTS_HW/blob/master/HW.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1KJeLsbZOcuLltaE6Wgogh-UBOQ2Y6TFW?usp=sharing)
 
 Описание заданий содержится в HW.ipynb
 
